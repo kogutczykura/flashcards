@@ -1,0 +1,23 @@
+package com.flash.flashcardsGroup.entity;
+
+import com.flash.flashcards.entity.FlashCard;
+import com.flash.users.entity.User;
+import lombok.*;
+
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
+@Getter
+@Setter
+@Entity
+public class FlashCardsGroup {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id", nullable = false)
+    private Long id;
+    @OneToMany(mappedBy = "flashCardsGroup")
+    private List<FlashCard> flashCardList;
+    @ManyToMany
+    private List<User> users = new ArrayList<>();
+}
