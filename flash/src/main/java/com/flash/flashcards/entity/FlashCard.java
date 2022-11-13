@@ -1,18 +1,16 @@
 package com.flash.flashcards.entity;
 
 import com.flash.flashcardsGroup.entity.FlashCardsGroup;
+import com.flash.general.entity.BaseEntity;
 import lombok.*;
 
 import javax.persistence.*;
 @Getter
 @Setter
-@Builder
 @Entity
-@NoArgsConstructor
-@AllArgsConstructor
-public class FlashCard {
+public class FlashCard extends BaseEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String word;
     private String translatedWord;
@@ -25,9 +23,6 @@ public class FlashCard {
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private Language toLanguage;
-    private Long createdDate;
-    private Long lastUpdatedDate;
-    private Long createdBy;
     @ManyToOne
     private FlashCardsGroup flashCardsGroup;
 }

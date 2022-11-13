@@ -1,6 +1,7 @@
 package com.flash.flashcardsGroup.entity;
 
 import com.flash.flashcards.entity.FlashCard;
+import com.flash.general.entity.BaseEntity;
 import com.flash.users.entity.User;
 import lombok.*;
 
@@ -11,7 +12,7 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-public class FlashCardsGroup {
+public class FlashCardsGroup extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)

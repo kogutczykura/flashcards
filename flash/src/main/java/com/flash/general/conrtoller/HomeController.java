@@ -1,4 +1,4 @@
-package com.flash.home.controller;
+package com.flash.general.conrtoller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
