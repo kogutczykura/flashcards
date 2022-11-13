@@ -21,6 +21,9 @@ public class User {
     private String name;
     private String surname;
     private String mail;
+    private Long createdDate;
+    private Long lastUpdatedDate;
+    private Long createdBy;
     @Fetch(value = FetchMode.SUBSELECT)
     @ManyToMany(mappedBy = "users", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<FlashCardsGroup> flashCardsGroup = new ArrayList<>();

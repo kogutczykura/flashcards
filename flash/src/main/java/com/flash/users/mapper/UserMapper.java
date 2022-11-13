@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
-@Component
 @RequiredArgsConstructor
 public class UserMapper {
     public static UserDTO toDTO(User user) {
@@ -22,9 +22,9 @@ public class UserMapper {
 
     public static List<UserDTO> toDtoUsers(List<User> allUsers) {
         List<UserDTO> userDTOS = new ArrayList<>();
-        allUsers.forEach(user -> {
-            userDTOS.add(toDTO(user));
-        });
+        allUsers.stream()
+                .map(UserMapper::toDTO)
+                .collect(Collectors.toList());
         return userDTOS;
     }
 }

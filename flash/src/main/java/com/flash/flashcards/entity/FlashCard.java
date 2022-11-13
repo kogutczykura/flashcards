@@ -25,6 +25,9 @@ public class FlashCard {
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private Language toLanguage;
+    private Long createdDate;
+    private Long lastUpdatedDate;
+    private Long createdBy;
     @ManyToOne
     private FlashCardsGroup flashCardsGroup;
 }

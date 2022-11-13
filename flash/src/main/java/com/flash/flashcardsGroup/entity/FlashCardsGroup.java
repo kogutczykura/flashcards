@@ -16,6 +16,9 @@ public class FlashCardsGroup {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
     private Long id;
+    private Long createdDate;
+    private Long lastUpdatedDate;
+    private Long createdBy;
     @OneToMany(mappedBy = "flashCardsGroup")
     private List<FlashCard> flashCardList;
     @ManyToMany
