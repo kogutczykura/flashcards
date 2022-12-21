@@ -1,9 +1,68 @@
 <div>
     <div class="row">
         <div class="col-12">
+            <div class="card justify-content-center" style="font-family: 'Calibri Light',cursive; background-color: rgba(168,173,225,0.69)">
+                <h1>Login</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
             <div class="card justify-content-center">
-                <input type="button" class="btn btn-secondary" value="Login"/>
-                <div style="display:inline; margin: 0 auto; padding-top: 10px"> If you haven't an account <a href="/register">register</a>.</div>
+                <div id="g_id_onload"
+                     data-client_id="YOUR_GOOGLE_CLIENT_ID"
+                     data-login_uri="https://your.domain/your_login_endpoint"
+                     data-auto_prompt="false">
+                </div>
+                <div class="g_id_signin"
+                     data-type="standard"
+                     data-size="large"
+                     data-theme="outline"
+                     data-text="sign_in_with"
+                     data-shape="rectangular"
+                     data-logo_alignment="left">
+                </div>
+                <div id="g_id_onload"
+                     data-client_id="YOUR_GOOGLE_CLIENT_ID"
+                     data-login_uri="https://your.domain/your_login_endpoint"
+                     data-auto_prompt="false">
+                </div>
+                <div class="g_id_signin"
+                     data-type="standard"
+                     data-size="large"
+                     data-theme="outline"
+                     data-text="sign_in_with"
+                     data-shape="rectangular"
+                     data-logo_alignment="left"
+                     style="padding-top: 20px">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="card justify-content-center" style="background-color: rgba(168,173,225,0.69)">
+                <form action="" method="post" name="login">
+                    <div class="form-group" style="font-family: 'Calibri Light',cursive">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp"
+                               placeholder="Enter email">
+                    </div>
+                    <div class="form-group" style="font-family: 'Calibri Light',cursive">
+                        <label for="exampleInputEmail1">Password</label>
+                        <input type="password" name="password" id="password" class="form-control"
+                               aria-describedby="emailHelp" placeholder="Enter Password">
+                    </div>
+                    <div class="form-group"
+                         style="font-family: 'Calibri Light',cursive; display: inline-block; padding-top: 5px">
+                        <p class="text-center">If you don't have an account <a href="/register">register</a>.</p>
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm"
+                                style="background-color: cadetblue; width: 100%">Login
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

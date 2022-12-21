@@ -11,7 +11,6 @@ import pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelper;
 import javax.annotation.PostConstruct;
 import java.io.IOException;
 import java.util.Collection;
-import java.util.stream.Collectors;
 
 @Configuration
 public class HandlebarsConfiguration {

@@ -8,6 +8,8 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 public class FlashCard extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

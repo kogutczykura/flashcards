@@ -27,4 +27,18 @@ public class UserMapper {
                 .collect(Collectors.toList());
         return userDTOS;
     }
+
+    public static User fromDto(UserDTO userDTO) {
+        User user = new User();
+        user.setId(userDTO.getId());
+        user.setMail(userDTO.getMail());
+        user.setName(userDTO.getName());
+        user.setSurname(userDTO.getSurname());
+        user.setFlashCardsGroup(userDTO.getFlashCardsGroup());
+        return user;
+    }
+
+    public static List<User> fromDtoList(List<UserDTO> userDTOS) {
+        return userDTOS.stream().map(UserMapper::fromDto).toList();
+    }
 }

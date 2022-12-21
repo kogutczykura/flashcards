@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    {{>head}}
+</head>
+<body>
+<div class="row">
+    {{>topNav}}
+</div>
+<div class="container">
+    lalallaa
+    <
+    <h1 class="text-3xl font-bold underline">
+        Hello world!
+    </h1>
+    <div class="flex flex-col-reverse ...">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+    </div>
+    <button class="bg-sky-500 hover:bg-sky-700 ...">
+        Save changes
+    </button>
+    <button class="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 ...">
+        Save changes
+    </button>
+    <div class="relative h-32 w-32 ...">
+        <div class="absolute left-0 top-0 h-16 w-16 ...">01</div>
+    </div>
+</div>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+<script>
+    module.exports = {
+        theme: {
+            extend: {
+                inset: {
+                    '3px': '3px',
+                }
+            }
+        }
+    }
+</script>

@@ -2,10 +2,14 @@ package com.flash.flashcards.mapper;
 
 import com.flash.flashcards.entity.FlashCard;
 import com.flash.flashcards.model.FlashCardDTO;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
+@RequiredArgsConstructor
 public class FlashCardMapper {
     public static FlashCardDTO toDto(FlashCard flashCard) {
         FlashCardDTO flashCardDTO = new FlashCardDTO();
