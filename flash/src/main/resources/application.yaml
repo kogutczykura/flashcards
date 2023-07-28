@@ -1,0 +1,23 @@
+handlebars:
+  cache: false
+  suffix: .html
+spring:
+  datasource:
+    continue-on-error: true
+    host: db.bocqaptsbalsynwanasw.supabase.co
+    initialization-mode: always
+    initialize: true
+    url: jdbc:postgresql://db.bocqaptsbalsynwanasw.supabase.co:5432/postgres?user=postgres&password=psychiczna.1sks
+  devtools:
+    livereload:
+      enabled: true
+    restart:
+      poll-interval: 200ms
+      quiet-period: 100ms
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
